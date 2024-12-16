@@ -4,13 +4,13 @@ const axios = require("axios");
 const app = express();
 const port = 3000;
 
-const pokemonApi = "https://pokeapi.co/api/v2/pokemon1";
+const pokemonApi = "https://pokeapi.co/api/v2/pokemon";
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.get("/pokemon-list", async (req, res) => {
+app.get("/pokemon/list", async (req, res) => {
   const limit = req.query.limit ?? 10;
   const offset = req.query.offset ?? 0;
 
